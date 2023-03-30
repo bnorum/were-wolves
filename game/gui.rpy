@@ -73,7 +73,7 @@ define gui.name_text_size = 32
 define gui.interface_text_size = 32
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 16
+define gui.label_text_size = 32
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 32
@@ -172,6 +172,7 @@ define gui.button_text_insensitive_color = gui.insensitive_color
 define gui.button_text_xalign = 0.0
 
 
+
 ## These variables override settings for different kinds of buttons. Please see
 ## the gui documentation for the kinds of buttons available, and what each is
 ## used for.
@@ -184,10 +185,11 @@ define gui.check_button_borders = Borders(12, 3, 3, 3)
 
 define gui.confirm_button_text_xalign = 0.5
 
+
 define gui.page_button_borders = Borders(7, 3, 7, 3)
 
 define gui.quick_button_borders = Borders(7, 3, 7, 0)
-define gui.quick_button_text_size = 9
+define gui.quick_button_text_size = 32
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
@@ -208,10 +210,11 @@ define gui.choice_button_tile = False
 define gui.choice_button_borders = Borders(63, 4, 63, 4)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
-define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#cccccc"
-define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = "#444444"
+define gui.choice_button_text_xalign = 0.0
+
+define gui.choice_button_text_idle_color = "#ffffff"
+define gui.choice_button_text_hover_color = "#fbffd3"
+define gui.choice_button_text_insensitive_color = "#ffffff"
 
 
 ## File Slot Buttons ###########################################################
@@ -224,7 +227,7 @@ define gui.choice_button_text_insensitive_color = "#444444"
 define gui.slot_button_width = 173
 define gui.slot_button_height = 129
 define gui.slot_button_borders = Borders(7, 7, 7, 7)
-define gui.slot_button_text_size = 9
+define gui.slot_button_text_size = 32
 define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_idle_color = gui.idle_small_color
 define gui.slot_button_text_selected_idle_color = gui.selected_color
@@ -246,22 +249,22 @@ define gui.file_slot_rows = 2
 
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
-define gui.navigation_xpos = 25
+define gui.navigation_xpos = 32
 
 ## The vertical position of the skip indicator.
-define gui.skip_ypos = 7
+define gui.skip_ypos = 8
 
 ## The vertical position of the notify screen.
-define gui.notify_ypos = 29
+define gui.notify_ypos = 32
 
 ## The spacing between menu choices.
-define gui.choice_spacing = 14
+define gui.choice_spacing = 16
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 3
+define gui.navigation_spacing = 8
 
 ## Controls the amount of spacing between preferences.
-define gui.pref_spacing = 7
+define gui.pref_spacing = 8
 
 ## Controls the amount of spacing between preference buttons.
 define gui.pref_button_spacing = 0
@@ -270,7 +273,7 @@ define gui.pref_button_spacing = 0
 define gui.page_spacing = 0
 
 ## The spacing between file slots.
-define gui.slot_spacing = 7
+define gui.slot_spacing = 8
 
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 1.0
@@ -426,12 +429,12 @@ init python:
     def small():
 
         ## Font sizes.
-        gui.text_size = 19
-        gui.name_text_size = 23
+        gui.text_size = 32
+        gui.name_text_size = 32
         gui.notify_text_size = 16
-        gui.interface_text_size = 19
-        gui.button_text_size = 19
-        gui.label_text_size = 22
+        gui.interface_text_size = 32
+        gui.button_text_size = 32
+        gui.label_text_size = 32
 
         ## Adjust the location of the textbox.
         gui.textbox_height = 150
@@ -443,7 +446,7 @@ init python:
         gui.slider_size = 23
 
         gui.choice_button_width = 775
-        gui.choice_button_text_size = 19
+        gui.choice_button_text_size = 32
 
         gui.navigation_spacing = 13
         gui.pref_button_spacing = 7
@@ -451,7 +454,7 @@ init python:
         gui.history_height = 119
         gui.history_text_width = 432
 
-        gui.quick_button_text_size = 13
+        gui.quick_button_text_size = 32
 
         ## File button layout.
         gui.file_slot_cols = 2
