@@ -104,7 +104,7 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 150
+define gui.name_xpos = 80
 define gui.name_ypos = 0
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
@@ -210,7 +210,7 @@ define gui.choice_button_tile = False
 define gui.choice_button_borders = Borders(63, 4, 63, 4)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
-define gui.choice_button_text_xalign = 0.0
+define gui.choice_button_text_xalign = 0.5
 
 define gui.choice_button_text_idle_color = "#ffffff"
 define gui.choice_button_text_hover_color = "#fbffd3"
@@ -249,13 +249,13 @@ define gui.file_slot_rows = 2
 
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
-define gui.navigation_xpos = 32
+define gui.navigation_xpos = 16
 
 ## The vertical position of the skip indicator.
 define gui.skip_ypos = 8
 
 ## The vertical position of the notify screen.
-define gui.notify_ypos = 32
+define gui.notify_ypos = 48
 
 ## The spacing between menu choices.
 define gui.choice_spacing = 16
@@ -276,7 +276,7 @@ define gui.page_spacing = 0
 define gui.slot_spacing = 8
 
 ## The position of the main menu text.
-define gui.main_menu_text_xalign = 1.0
+define gui.main_menu_text_xalign = 0.0
 
 
 ## Frames ######################################################################
@@ -398,7 +398,7 @@ define gui.nvl_thought_width = 488
 define gui.nvl_thought_xalign = 0.0
 
 ## The position of nvl menu_buttons.
-define gui.nvl_button_xpos = 282
+define gui.nvl_button_xpos = 0
 define gui.nvl_button_xalign = 0.0
 
 ## Localization ################################################################
