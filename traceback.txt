@@ -1,0 +1,42 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While processing the align property of style quick_button_text:
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
+    __update()
+  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
+    renpy.style.rebuild()
+TypeError: 'float' object is not subscriptable
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
+    run(restart)
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\main.py", line 76, in run
+    renpy.translation.init_translation()
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\translation\__init__.py", line 583, in init_translation
+    renpy.store._init_language() # type: ignore
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\translation\__init__.py", line 672, in change_language
+    i()
+  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
+    __update()
+  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
+    renpy.style.rebuild()
+  File "style.pyx", line 796, in renpy.style.rebuild
+  File "style.pyx", line 789, in renpy.style.build_styles
+  File "style.pyx", line 710, in renpy.style.build_style
+  File "style.pyx", line 707, in renpy.style.build_style
+  File "gen3-static/style_functions.pyx", line 1764, in style_functions.align_property
+  File "include/style_common.pxi", line 30, in style_functions.index_0
+TypeError: 'float' object is not subscriptable
+
+Windows-10-10.0.19044 AMD64
+Ren'Py 8.0.3.22090809
+We're Wolves 1.0
+Thu Mar 30 23:05:14 2023
