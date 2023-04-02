@@ -40,7 +40,7 @@ define gui.hover_color = '#FFFF00'
 define gui.selected_color = '#ffffff'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#000000'
+define gui.insensitive_color = '#888888'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
@@ -213,7 +213,7 @@ define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
 
 define gui.choice_button_text_idle_color = "#ffffff"
-define gui.choice_button_text_hover_color = "#fbffd3"
+define gui.choice_button_text_hover_color = "#ffff00"
 define gui.choice_button_text_insensitive_color = "#ffffff"
 
 
@@ -249,7 +249,7 @@ define gui.file_slot_rows = 2
 
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
-define gui.navigation_xpos = 8
+define gui.navigation_xpos = 16
 
 ## The vertical position of the skip indicator.
 define gui.skip_ypos = 8
