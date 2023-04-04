@@ -1,9 +1,14 @@
-﻿# The script of the game goes in this file.
+﻿init python:
+    def regblip(event, **kwargs):
+        if event == "show":
+            renpy.music.play("audio/blip1.mp3", channel="sound",loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.play("audio/blip1.mp3", channel="sound", loop=False)
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
 
-define g = Character("guy")
+# Declare characters
+
+define g = Character("guy", callback = regblip)
 
 
 # The game starts here.
