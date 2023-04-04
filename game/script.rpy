@@ -1,4 +1,5 @@
 ﻿init python:
+    config.nearest_neighbor = True
     def regblip(event, **kwargs):
         if event == "show":
             renpy.music.play("audio/blip1.mp3", channel="sound",loop=True)
