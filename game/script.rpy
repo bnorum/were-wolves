@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define g = Character("guy")
 
 
 # The game starts here.
@@ -20,37 +20,19 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
-
+    show guy smile
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    g "You've created a new Ren'Py game."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    g "Once you add a story, pictures, and music, you can release it to the world!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    g "Once you add a story, pictures, and music, you can release it to the world!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    g "Once you add a story, pictures, and music, you can release it to the world!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    g "You've created a new Ren'Py game."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    e "You've created a new Ren'Py game."
-
-    e "You've created a new Ren'Py game."
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
- 
     # This ends the game.
 
     return
