@@ -9,35 +9,43 @@
 
 # Declare characters
 
-define g = Character("guy", callback = regblip)
+define g = Character("Jean", callback = regblip)
 
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg room
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    show jean smile
 
-    show guy smile
-    # These display lines of dialogue.
+    g "soo... youre pretty weird huh"
 
-    g "You've created a new Ren'Py game."
+    menu:
 
-    g "Once you add a story, pictures, and music, you can release it to the world!"
+        "Yeah":
+            jump yeahjean
 
-    g "Once you add a story, pictures, and music, you can release it to the world!"
+        "No":
+            jump nojean
 
-    g "Once you add a story, pictures, and music, you can release it to the world!"
+label yeahjean:
 
-    g "You've created a new Ren'Py game."
+    g "lol i didnt expect you to admit to it"
+
+    jump afternoyeah
+
+label nojean:
+
+    g "lol you are"
+
+    jump afternoyeah
+
+label afternoyeah:
+
+    g "pretty cool that you at least answered"
+    g "most people get kinda mad"
 
     # This ends the game.
 
