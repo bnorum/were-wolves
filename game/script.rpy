@@ -3,9 +3,15 @@
 
     def regblip(event, **kwargs):
         if event == "show":
-            renpy.music.play("audio/blip1.mp3", channel="sound",loop=True)
+            renpy.music.play("audio/blip1.ogg", channel="sound",loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.play("audio/blip1.mp3", channel="sound", loop=False)
+            renpy.music.stop(channel="sound")
+    def groanblip(event, **kwargs):
+        if event == "show":
+            renpy.music.play("audio/blip2.ogg", channel="sound",loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+
 
 
 image duke rose:
@@ -19,7 +25,7 @@ image duke rose:
 # Declare characters
 
 define g = Character("Jean", callback = regblip)
-define d = Character("Duke", callback = regblip)
+define d = Character("Duke", callback = groanblip)
 
 # The game starts here.
 
@@ -69,10 +75,10 @@ label dukestart:
 
     "..."
     "Holy shit"
-
+    show duke rose
     d "Hello beautiful."
 
-    show duke rose
+    
 
     d "I am Duke."
 
