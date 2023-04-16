@@ -34,10 +34,11 @@ label start:
     scene bg room
 
     show jean smile
-
     g "soo... youre pretty weird huh"
 
     menu:
+
+        g "soo... youre pretty weird huh{fast}"
 
         "Yeah":
             jump yeahjean
@@ -71,15 +72,14 @@ label afternoyeah:
 label dukestart:    
     "That guy was weird. Not me. I'm not weird, right? Not werewolf-weird at least."
 
+    "Ok who's next"
+
     show duke neutral
 
     "..."
     "Holy shit"
     show duke rose
     d "Hello beautiful."
-
-    
-
     d "I am Duke."
 
     show duke neutral
@@ -88,16 +88,14 @@ label dukestart:
 
     "You find yourself completely falling for Duke. This might be game over."
 
-    "..."
-
-    "..."
-
-    "...Just kidding"
+    ".{w=.2}.{w=.2}.{w=.5}Just kidding"
 
     d "I can benchpress a minivan."
 
     menu:
    
+        d "I can benchpress a minivan.{fast}"
+
 
         "That is an interesting fact":
             jump dukefact
@@ -113,7 +111,7 @@ label dukefact:
     d "Why do you think that is?"
 
     menu:
-
+        d "Why do you think that is?{fast}"
 
         "The D is for Duke and dog is alliteration":
             jump dukefact2
@@ -124,9 +122,11 @@ label dukefact2:
     d "That is incorrect."
     d "It is because my pecs are a DD cup. The OG stands for original gangster."
     jump dukeafter
+
 label dukefear: 
     d "It is only natural. My abundance of handsome attributes intimidates everyone."
     jump dukeafter
+
 label dukeafter:
     d "I must go."
     d "Goodbye, my love."

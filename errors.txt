@@ -2,21 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 93: menu statement expects a non-empty block.
+File "game/script.rpy", line 40: menu statement expects a non-empty block.
     menu:
         ^
 
-File "game/script.rpy", line 97: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    "That is an interesting fact":
+File "game/script.rpy", line 44: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    "Yeah":
     ^
 
-File "game/script.rpy", line 110: menu statement expects a non-empty block.
+File "game/script.rpy", line 114: menu statement expects a non-empty block.
     menu:
         ^
 
-File "game/script.rpy", line 114: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+File "game/script.rpy", line 117: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
     "The D is for Duke and dog is alliteration":
     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Apr 16 12:21:49 2023
+Sun Apr 16 14:03:59 2023
