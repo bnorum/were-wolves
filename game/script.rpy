@@ -1,5 +1,6 @@
 ﻿init python:
     config.nearest_neighbor = True
+
     def regblip(event, **kwargs):
         if event == "show":
             renpy.music.play("audio/blip1.mp3", channel="sound",loop=True)
@@ -7,10 +8,18 @@
             renpy.music.play("audio/blip1.mp3", channel="sound", loop=False)
 
 
+image duke rose:
+    "duke rose 1"
+    pause 0.3
+    "duke rose 2"
+    pause 0.3
+    repeat
+
+
 # Declare characters
 
 define g = Character("Jean", callback = regblip)
-
+define d = Character("Duke", callback = regblip)
 
 # The game starts here.
 
@@ -46,7 +55,73 @@ label afternoyeah:
 
     g "pretty cool that you at least answered"
     g "most people get kinda mad"
+    g "you know what"
+    g "date over weirdo"
+    g "peace"
 
-    # This ends the game.
+    hide jean smile
+    jump dukestart
 
+label dukestart:    
+    "That guy was weird. Not me. I'm not weird, right? Not werewolf-weird at least."
+
+    show duke neutral
+
+    "..."
+    "Holy shit"
+
+    d "Hello beautiful."
+
+    show duke rose
+
+    d "I am Duke."
+
+    show duke neutral
+
+    d "But you probably already knew that. Since you saw me in your dreams last night."
+
+    "You find yourself completely falling for Duke. This might be game over."
+
+    "..."
+
+    "..."
+
+    "...Just kidding"
+
+    d "I can benchpress a minivan."
+
+    menu:
+   
+
+        "That is an interesting fact":
+            jump dukefact
+
+        "I am afraid of you":
+            jump dukefear
+
+label dukefact: 
+
+    d "It is indeed an interesting fact about me."
+    d "Here's another:"
+    d "My friends call me D-Dog"
+    d "Why do you think that is?"
+
+    menu:
+
+
+        "The D is for Duke and dog is alliteration":
+            jump dukefact2
+        "You like dogs":
+            jump dukefact2
+           
+label dukefact2:
+    d "That is incorrect."
+    d "It is because my pecs are a DD cup. The OG stands for original gangster."
+    jump dukeafter
+label dukefear: 
+    d "It is only natural. My abundance of handsome attributes intimidates everyone."
+    jump dukeafter
+label dukeafter:
+    d "I must go."
+    d "Goodbye, my love."
     return

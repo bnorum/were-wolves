@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 252: expected expression
-    define gui.navigation_xpos = 
-                                 ^
+File "game/script.rpy", line 93: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/script.rpy", line 97: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    "That is an interesting fact":
+    ^
+
+File "game/script.rpy", line 110: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/script.rpy", line 114: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    "The D is for Duke and dog is alliteration":
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Mar 30 16:04:16 2023
+Sun Apr 16 12:21:49 2023
