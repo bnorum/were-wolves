@@ -86,7 +86,7 @@ label dukestart:
 
     d "But you probably already knew that. Since you saw me in your dreams last night."
 
-    "You find yourself completely falling for Duke. This might be game over."
+    "You find yourself completely falling for Duke. {w=.2}This might be game over."
 
     ".{w=.2}.{w=.2}.{w=.5}Just kidding"
 
@@ -120,11 +120,17 @@ label dukefact:
            
 label dukefact2:
     d "That is incorrect."
-    d "It is because my pecs are a DD cup. The OG stands for original gangster."
+    d "It is because my pecorals are a DD cup. The OG stands for original gangster."
     jump dukeafter
 
 label dukefear: 
     d "It is only natural. My abundance of handsome attributes intimidates everyone."
+		d "The hair. {w=.2}The muscles. {w=.2} The tasteful speech pattern."
+		#show duke doing quotation mark fingers
+		d "I truly am the honest-to-goodness{nw}"
+		#quote fingers
+		d "I truly am the honest-to-goodness {fast}\"real deal\""
+
     jump dukeafter
 
 label dukeafter:
