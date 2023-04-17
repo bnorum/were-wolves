@@ -28,6 +28,12 @@ image duke quote:
     pause 0.3
     repeat
 
+image duke wink:
+    "duke wink 1"
+    pause 0.3
+    "duke wink 2"
+    pause 0.3
+    repeat
 
 # Declare characters
 
@@ -37,46 +43,13 @@ define d = Character("Duke", callback = groanblip)
 # The game starts here.
 
 label start:
+    "this is night one"
+    jump night1duke
+
+label night1duke:
 
     scene bg room
-
-    show jean smile
-    g "soo... youre pretty weird huh"
-
-    menu:
-
-        g "soo... youre pretty weird huh{fast}"
-
-        "Yeah":
-            jump yeahjean
-
-        "No":
-            jump nojean
-
-label yeahjean:
-
-    g "lol i didnt expect you to admit to it"
-
-    jump afternoyeah
-
-label nojean:
-
-    g "lol you are"
-
-    jump afternoyeah
-
-label afternoyeah:
-
-    g "pretty cool that you at least answered"
-    g "most people get kinda mad"
-    g "you know what"
-    g "date over weirdo"
-    g "peace"
-
-    hide jean smile
-    jump dukestart
-
-label dukestart:    
+   
     "That guy was weird. Not me. I'm not weird, right? Not werewolf-weird at least."
 
     "Ok who's next"
@@ -91,7 +64,7 @@ label dukestart:
 
     show duke neutral
 
-    d "But you probably already knew that. Since you saw me in your dreams last night."
+    d "But it is likely you already knew that. Since you saw me in your dreams last night."
 
     "You find yourself completely falling for Duke. {w=.2}This might be game over."
 
@@ -131,7 +104,7 @@ label dukefact2:
     show duke quote
     d "It is because my pecorals are a DD cup. The OG is an abbreviation of{fast} \"original gangster.\""
     show duke neutral
-    jump dukeafter
+    jump dukequestions
 
 label dukefear: 
     d "It is only natural. My abundance of handsome attributes intimidates everyone."
@@ -140,9 +113,43 @@ label dukefear:
     show duke quote
     d "I truly am the honest-to-goodness {fast}\"real deal.\""
     show duke neutral
-    jump dukeafter
+    jump dukequestions
 
-label dukeafter:
+label dukequestions:
+    d "Do you have any questions about yours truly?"
+
+    menu:
+        d "Do you have any questions about yours truly?{fast}"
+
+        "What is your squat max?":
+            jump dukesquat
+        "No":
+            jump dukebye
+
+label dukesquat:
+    d "Ah?"
+    d "Ahahahahaha{w=.2}ha{w=.2}ha{w=.8}ha"
+    d "Let us not ask too much of each other. We have just met, after all."
+    "He seems embarassed"
+    "Ask more?"
+
+    menu:
+        "Ask more?{fast}"
+
+        "Please, I'm very interested":
+            jump dukesquatmore
+        "No":
+            jump dukequestions
+
+label dukesquatmore:
+    d "I seem to be forgetting."
+    d "I have it written down. {w=.5} In my house. {w=.5} Yes, {w=.5} in a journal in my house"
+    d "I can tell you tomorrow. {w=.2}I swear it on my name."
+    jump dukebye
+label dukebye:
     d "I must go."
+    show duke wink
     d "Goodbye, my love."
+    show duke neutral
+    
     return

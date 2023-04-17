@@ -2,7 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 128: Tab characters are not allowed in Ren'Py scripts.
+File "game/script.rpy", line 124: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "What is your squat max?"
+                             ^
+
+File "game/script.rpy", line 139: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Please, I'm very interested."
+                                  ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Apr 17 10:56:17 2023
+Mon Apr 17 14:09:13 2023
