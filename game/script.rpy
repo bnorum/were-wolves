@@ -127,7 +127,10 @@ label dukefact:
            
 label dukefact2:
     d "That is incorrect."
-    d "It is because my pecorals are a DD cup. The OG stands for original gangster."
+    d "It is because my pecorals are a DD cup. The OG is an abbreviation of{nw}"
+    show duke quote
+    d "It is because my pecorals are a DD cup. The OG is an abbreviation of{fast} \"original gangster.\""
+    show duke neutral
     jump dukeafter
 
 label dukefear: 
