@@ -21,6 +21,13 @@ image duke rose:
     pause 0.3
     repeat
 
+image duke quote:
+    "duke quote 1"
+    pause 0.3
+    "duke quote 2"
+    pause 0.3
+    repeat
+
 
 # Declare characters
 
@@ -125,12 +132,11 @@ label dukefact2:
 
 label dukefear: 
     d "It is only natural. My abundance of handsome attributes intimidates everyone."
-		d "The hair. {w=.2}The muscles. {w=.2} The tasteful speech pattern."
-		#show duke doing quotation mark fingers
-		d "I truly am the honest-to-goodness{nw}"
-		#quote fingers
-		d "I truly am the honest-to-goodness {fast}\"real deal\""
-
+    d "The hair. {w=.2}The muscles. {w=.2} The tasteful speech pattern."
+    d "I truly am the honest-to-goodness{nw}"
+    show duke quote
+    d "I truly am the honest-to-goodness {fast}\"real deal.\""
+    show duke neutral
     jump dukeafter
 
 label dukeafter:
