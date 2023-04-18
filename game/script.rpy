@@ -43,15 +43,16 @@ define d = Character("Duke", callback = groanblip)
 # The game starts here.
 
 label start:
-    "this is night one"
+    "Welcome to the demo of \"We're Wolves.\" This is a game I'm making about werewolves. The game isn't done, nor is this demo."
+    "The goal of the game is to go on 5 nights of speed dates with a group of 8 people. By the last night you must guess who isn't a werewolf."
+    "Pretty cute, right? This demo takes you through one date with a very excellent man named Duke. Good luck out there."
     jump night1duke
 
 label night1duke:
 
     scene bg room
-    "That guy was weird. Not me. I'm not weird, right? Not werewolf-weird at least."
 
-    "Ok who's next"
+    "Okay, who's next"
 
     show duke neutral
 
@@ -122,6 +123,8 @@ label dukequestions:
 
         "What is your squat max?":
             jump dukesquat
+        "Do you have a favorite season?":
+            jump dukeseasons
         "No":
             jump dukebye
 
@@ -144,7 +147,18 @@ label dukesquatmore:
     d "I seem to be forgetting."
     d "I have it written down. {w=.5} In my house. {w=.5} Yes, {w=.5} in a journal in my house"
     d "I can tell you tomorrow. {w=.2}I swear it on my name."
-    jump dukebye
+    jump dukequestions
+
+label dukeseasons:
+    d "I do indeed have a favorite season. It's Winter."
+    d "Because Winter has the longest nights. {nw}"
+    show duke wink
+    d "Because Winter has the longest nights. {fast} If you know what I mean"
+    show duke neutral
+    d "I mean that there is more time for a morning run without the sun up."
+    d "I didn't imply anything inappropriate there, did I?"
+    jump dukequestions
+    
 label dukebye:
     d "I must go."
     show duke wink
