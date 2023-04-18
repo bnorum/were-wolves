@@ -49,7 +49,6 @@ label start:
 label night1duke:
 
     scene bg room
-    play music "audio/music.mp3"
     "That guy was weird. Not me. I'm not weird, right? Not werewolf-weird at least."
 
     "Ok who's next"
