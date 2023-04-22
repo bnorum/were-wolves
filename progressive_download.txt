@@ -1,4 +1,4 @@
-# RenPyWeb progressive download rules - first match applies
+# RenPyWeb progressive download rule - first match applies
 # '+' = progressive download, '-' = keep in game.zip (default)
 # See https://www.renpy.org/doc/html/build.html#classifying-and-ignoring-files for matching
 #
