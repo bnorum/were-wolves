@@ -115,22 +115,35 @@ label dukefear:
     show duke neutral
     jump dukequestions
 
+
+default d1squat = False
+default d1season = False
+default d1work = False
 label dukequestions:
     d "Do you have any questions about yours truly?"
 
+    $ config.menu_include_disabled = False
     menu:
         d "Do you have any questions about yours truly?{fast}"
 
-        "What is your squat max?":
+        "What is your squat max?" if not d1squat:
+            $ d1squat = True
             jump dukesquat
-        "Do you have a favorite season?":
+
+        "Do you have a favorite season?" if not d1season:
+            $ d1season = True
             jump dukeseasons
+
+        "What do you do for work?" if not d1work:
+            $ d1work = True
+            jump dukework
+
         "No":
             jump dukebye
 
 label dukesquat:
     d "Ah?"
-    d "Ahahahahaha{w=.2}ha{w=.2}ha{w=.8}ha"
+    d "Ahahahahaha{w=.2}ha{w=.2}ha{w=.4}ha"
     d "Let us not ask too much of each other. We have just met, after all."
     "He seems embarassed"
     "Ask more?"
@@ -153,12 +166,20 @@ label dukeseasons:
     d "I do indeed have a favorite season. It's Winter."
     d "Because Winter has the longest nights. {nw}"
     show duke wink
-    d "Because Winter has the longest nights. {fast} If you know what I mean"
+    d "Because Winter has the longest nights. {fast} If you know what I mean."
     show duke neutral
-    d "I mean that there is more time for a morning run without the sun up."
+    d "I mean that there is more time in the gym without the sun up."
     d "I didn't imply anything inappropriate there, did I?"
     jump dukequestions
     
+label dukework:
+    d "I am a personal trainer."
+    d "I sense you didn't expect that."
+    d "But I understand that I can be a very surprising individual."
+    d "You probably expected that I am a librarian, because of how well read I am."
+    d "While it is true, I'm more of a writer than a reader."
+    d "That is, I write out routines for my clients."
+    jump dukequestions
 label dukebye:
     d "I must go."
     show duke wink

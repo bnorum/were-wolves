@@ -1,51 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 58, in script
-    d "Hello beautiful."
-RecursionError: maximum recursion depth exceeded
+  File "game/script.rpy", line 136, in script call
+    call d1season
+  File "game/script.rpy", line 136, in script call
+    call d1season
+ScriptError: could not find label 'd1season'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 58, in script
-    d "Hello beautiful."
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\character.py", line 1266, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\character.py", line 927, in do_display
-    display_say(who,
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\character.py", line 666, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 3821, in interact_core
-    renpy.display.focus.before_interact(focus_roots)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\display\focus.py", line 349, in before_interact
-    root.find_focusable(callback, None)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 484, in find_focusable
-    i.find_focusable(callback, focus_name)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 484, in find_focusable
-    i.find_focusable(callback, focus_name)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 484, in find_focusable
-    i.find_focusable(callback, focus_name)
-  [Previous line repeated 976 more times]
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 480, in find_focusable
-    for i in self.visit():
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\atl.py", line 616, in visit
-    return self.children + block.visit() # type: ignore
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\atl.py", line 903, in visit
-    return [ j for i in self.statements for j in i.visit() ]
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\atl.py", line 903, in <listcomp>
-    return [ j for i in self.statements for j in i.visit() ]
-RecursionError: maximum recursion depth exceeded
+  File "game/script.rpy", line 136, in script call
+    call d1season
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/script.rpy", line 136, in script call
+    call d1season
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'd1season'.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 We're Wolves 1.0
-Mon Apr 17 13:42:22 2023
+Mon Apr 24 19:30:30 2023
