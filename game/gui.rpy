@@ -23,7 +23,7 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#ffffff'
+define gui.accent_color = '#FFFF00'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#ffffff'
@@ -37,7 +37,7 @@ define gui.hover_color = '#FFFF00'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#ffffff'
+define gui.selected_color = '#FFFF00'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#888888'
@@ -64,22 +64,22 @@ define gui.name_text_font = "apple_kid.ttf"
 define gui.interface_text_font = "apple_kid.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 32
+define gui.text_size = 28
 
 ## The size of character names.
-define gui.name_text_size = 32
+define gui.name_text_size = 28
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 32
+define gui.interface_text_size = 28
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 32
+define gui.label_text_size = 28
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 32
+define gui.notify_text_size = 28
 
 ## The size of the game's title.
-define gui.title_text_size = 32
+define gui.title_text_size = 28
 
 
 ## Main and Game Menus #########################################################
@@ -105,7 +105,7 @@ define gui.textbox_yalign = 1.0
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
 define gui.name_xpos = 14
-define gui.name_ypos = 5
+define gui.name_ypos = 8
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -189,7 +189,7 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(7, 3, 7, 3)
 
 define gui.quick_button_borders = Borders(7, 3, 7, 0)
-define gui.quick_button_text_size = 32
+define gui.quick_button_text_size = 28
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
@@ -227,7 +227,7 @@ define gui.choice_button_text_insensitive_color = "#ffffff"
 define gui.slot_button_width = 173
 define gui.slot_button_height = 129
 define gui.slot_button_borders = Borders(7, 7, 7, 7)
-define gui.slot_button_text_size = 32
+define gui.slot_button_text_size = 28
 define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_idle_color = gui.idle_small_color
 define gui.slot_button_text_selected_idle_color = gui.selected_color
@@ -429,12 +429,12 @@ init python:
     def small():
 
         ## Font sizes.
-        gui.text_size = 32
-        gui.name_text_size = 32
-        gui.notify_text_size = 16
-        gui.interface_text_size = 32
-        gui.button_text_size = 32
-        gui.label_text_size = 32
+        gui.text_size = 28
+        gui.name_text_size = 28
+        gui.notify_text_size = 28
+        gui.interface_text_size = 28
+        gui.button_text_size = 28
+        gui.label_text_size = 28
 
         ## Adjust the location of the textbox.
         gui.textbox_height = 150
@@ -446,7 +446,7 @@ init python:
         gui.slider_size = 23
 
         gui.choice_button_width = 775
-        gui.choice_button_text_size = 32
+        gui.choice_button_text_size = 28
 
         gui.navigation_spacing = 13
         gui.pref_button_spacing = 7
@@ -454,7 +454,7 @@ init python:
         gui.history_height = 119
         gui.history_text_width = 432
 
-        gui.quick_button_text_size = 32
+        gui.quick_button_text_size = 28
 
         ## File button layout.
         gui.file_slot_cols = 2
