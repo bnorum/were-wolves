@@ -39,18 +39,21 @@ image duke wink:
 
 define g = Character("Jean", callback = regblip)
 define d = Character("Duke", callback = groanblip)
+define b = Character("beet", callback = regblip)
 
 # The game starts here.
 
 label start:
+    scene bg room
     "Welcome to the demo of \"We're Wolves.\" This is a game I'm making about werewolves. The game isn't done, nor is this demo."
     "The goal of the game is to go on 5 nights of speed dates with a group of 8 people. By the last night you must guess who isn't a werewolf."
     "Pretty cute, right? This demo takes you through one date with a very excellent man named Duke. Good luck out there."
+    jump night1beet
     jump night1duke
 
 label night1duke:
 
-    scene bg room
+    
 
     "Okay, who's next"
 
@@ -64,7 +67,7 @@ label night1duke:
 
     show duke neutral
 
-    d "But it is likely you already knew that. Since you saw me in your dreams last night."
+    d "But it is likely you already knew that. As a result of the fact that you saw me in your dreams last night."
 
     "You find yourself completely falling for Duke. {w=.2}This might be game over."
 
@@ -86,7 +89,7 @@ label night1duke:
 label dukefact: 
 
     d "It is indeed an interesting fact about me."
-    d "Here's another:"
+    d "Here is another:"
     d "My friends call me D-Dog"
     d "Why do you think that is?"
 
@@ -163,13 +166,13 @@ label dukesquatmore:
     jump dukequestions
 
 label dukeseasons:
-    d "I do indeed have a favorite season. It's Winter."
+    d "I do indeed have a favorite season. It is Winter."
     d "Because Winter has the longest nights. {nw}"
     show duke wink
-    d "Because Winter has the longest nights. {fast} If you know what I mean."
+    d "Because Winter has the longest nights. {fast} If you are familiar with what I mean."
     show duke neutral
     d "I mean that there is more time in the gym without the sun up."
-    d "I didn't imply anything inappropriate there, did I?"
+    d "I did not imply anything inappropriate there, did I?"
     jump dukequestions
     
 label dukework:
@@ -179,11 +182,79 @@ label dukework:
     d "You probably expected that I am a librarian, because of how well read I am."
     d "While it is true, I'm more of a writer than a reader."
     d "That is, I write out routines for my clients."
+    d "I don't do much writing beyond that.{w=.5} And acrostic poems."
     jump dukequestions
+
+
 label dukebye:
-    d "I must go."
+    d "Ah, it looks like our time is up."
+    d "I will miss you dearly."
+    d "We know each other so well now, we are almost partners."
+    "It has been five minutes, give or take."
     show duke wink
     d "Goodbye, my love."
-    show duke neutral
+    d "Until tomorrow."
+    hide duke
+    "Wow."
+    jump night1beet
     
+label night1beet:
+    show beet neutral
+    b "hey dude"
+    
+    menu:
+        b "hey dude{fast}"
+
+        "Hi": 
+            jump beetHi
+
+        "hi": 
+            jump beetfunny
+   
+
+label beetHi:
+    b ".{w=.5}not much of a talker huh"
+    b "im usually not on this side of the conversation lol"
+    b "so uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+    b "what do you do as a job"
+    #allow keyboard entry. anything over ten characters "im not reading all that"
+    $ job = renpy.input("Job?")
+    $ job = job.strip()
+    jump beetjob
+
+label beetjob:
+    if len(job) > 10:
+        b "im not reading all that"
+        b "youve got a long ass title man"
+        b "couldnt make it a little more consumable for me ?"
+        b "get it down to nine letters ? or something ?"
+        b "whatever its fine i dont mind"
+        b "you can do what you like to do i dont judge"
+    #if
+    else:
+        b "thats neat"
+        b "thats a really cool job"
+        b "im sure its fulfilling and stuff"
+        b "are you any big projects youre working on at your job"
+        $ proj = renpy.input("Big projects?")
+        $ proj = proj.strip()
+        if len(proj) > 10:
+            b "phew wow that sure is a lot"
+            b "must be stressful"
+        #if
+        else:
+            b "oh that doesnt sound so bad"
+            b "i think even i could do that"
+        #else
+    #else
+
+    return
+
+    
+label beetfunny:
+    b "very funny"
+    b "its very funny that you did that"
+    "beet will remember that"
+    b "lmao"
+    b "really though i dont care that much"
     return

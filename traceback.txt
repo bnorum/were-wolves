@@ -1,26 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 136, in script call
-    call d1season
-  File "game/script.rpy", line 136, in script call
-    call d1season
-ScriptError: could not find label 'd1season'.
+  File "game/script.rpy", line 222, in script
+    if str(job).len() > 10:
+  File "game/script.rpy", line 222, in <module>
+    if str(job).len() > 10:
+AttributeError: 'str' object has no attribute 'len'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 136, in script call
-    call d1season
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 136, in script call
-    call d1season
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'd1season'.
+  File "game/script.rpy", line 222, in script
+    if str(job).len() > 10:
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 222, in <module>
+    if str(job).len() > 10:
+AttributeError: 'str' object has no attribute 'len'
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 We're Wolves 1.0
-Mon Apr 24 19:30:30 2023
+Thu Apr 27 17:06:18 2023
