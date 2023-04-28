@@ -198,15 +198,15 @@ label dukebye:
 label night1beet:
     show beet neutral
     b "hey dude"
-    
+   
     menu:
         b "hey dude{fast}"
 
         "Hi": 
             jump beetHi
 
-        "hi": 
-            jump beetlowercase
+    #   "hi": 
+    #      jump beetlowercase
    
 
 label beetHi:

@@ -1413,11 +1413,12 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
+        vbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 1.0
+            xoffset -20
+            yalign 0.65
 
             textbutton _("Back") action Rollback()
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
