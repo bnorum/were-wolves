@@ -198,6 +198,13 @@ label dukebye:
 label night1beet:
     show beet neutral
     b "hey dude"
+    b "you might be wondering what im doing here lol"
+    b "i wasnt supposed to be in the demo"
+    b "surprise haha i guess we just figure out a way to close it out"
+    b "my diologues not even finished anyway"
+    b "pretend this interaction didnt happen and ill just repeat the first thing"
+    b ""
+    b "hey dude"
     
     menu:
         b "hey dude{fast}"
@@ -205,8 +212,8 @@ label night1beet:
         "Hi": 
             jump beetHi
 
-        "hi": 
-            jump beetlowercase
+    #   "hi": 
+    #       jump beetlowercase
    
 
 label beetHi:
