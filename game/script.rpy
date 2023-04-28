@@ -36,8 +36,6 @@ image duke wink:
     repeat
 
 # Declare characters
-
-define g = Character("Jean", callback = regblip)
 define d = Character("Duke", callback = groanblip)
 define b = Character("beet", callback = regblip)
 
@@ -48,7 +46,6 @@ label start:
     "Welcome to the demo of \"We're Wolves.\" This is a game I'm making about werewolves. The game isn't done, nor is this demo."
     "The goal of the game is to go on 5 nights of speed dates with a group of 8 people. By the last night you must guess who isn't a werewolf."
     "Pretty cute, right? This demo takes you through one date with a very excellent man named Duke. Good luck out there."
-    jump night1beet
     jump night1duke
 
 label night1duke:
@@ -209,7 +206,7 @@ label night1beet:
             jump beetHi
 
         "hi": 
-            jump beetfunny
+            jump beetlowercase
    
 
 label beetHi:
@@ -229,7 +226,7 @@ label beetjob:
         b "couldnt make it a little more consumable for me ?"
         b "get it down to nine letters ? or something ?"
         b "whatever its fine i dont mind"
-        b "you can do what you like to do i dont judge"
+        b "you can do what youd like i dont judge"
     #if
     else:
         b "thats neat"
@@ -251,10 +248,6 @@ label beetjob:
     return
 
     
-label beetfunny:
-    b "very funny"
-    b "its very funny that you did that"
-    "beet will remember that"
-    b "lmao"
-    b "really though i dont care that much"
+label beetlowercase:
+    b ""
     return
