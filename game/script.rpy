@@ -198,7 +198,7 @@ label dukebye:
 label night1beet:
     show beet neutral
     b "hey dude"
-   
+
     menu:
         b "hey dude{fast}"
 
