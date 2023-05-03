@@ -35,6 +35,17 @@ image duke wink:
     pause 0.3
     repeat
 
+image beet paper:
+    "beet paper 1"
+    pause 0.3
+    "beet paper 2"
+    pause 0.1
+    "beet paper 3"
+    pause 0.3
+    "beet paper 2"
+    pause 0.1
+    repeat
+
 # Declare characters
 define d = Character("Duke", callback = groanblip)
 define b = Character("beet", callback = regblip)
@@ -245,6 +256,11 @@ label beetjob:
         #else
     #else
 
+    b "okay well anyway you dont seem to be talking much"
+    b "which is fine but im gonna need some effort"
+    b "so"
+    show beet paper
+    b "im gonna write out some questions for you to ask me on this paper"
     return
 
     

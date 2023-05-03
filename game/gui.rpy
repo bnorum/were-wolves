@@ -132,7 +132,7 @@ define gui.dialogue_xpos = 20
 define gui.dialogue_ypos = 40
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 760
+define gui.dialogue_width = 690
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
