@@ -132,7 +132,7 @@ define gui.dialogue_xpos = 20
 define gui.dialogue_ypos = 40
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 690
+define gui.dialogue_width = 600
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -342,20 +342,20 @@ define config.history_length = 250
 
 ## The height of a history screen entry, or None to make the height variable at
 ## the cost of performance.
-define gui.history_height = 88
+define gui.history_height = 400
 
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
-define gui.history_name_xpos = 97
+define gui.history_name_xpos = .5
 define gui.history_name_ypos = 0
-define gui.history_name_width = 97
-define gui.history_name_xalign = 1.0
+define gui.history_name_width = 64
+define gui.history_name_xalign = .5
 
 ## The position, width, and alignment of the dialogue text.
-define gui.history_text_xpos = 107
-define gui.history_text_ypos = 2
-define gui.history_text_width = 463
-define gui.history_text_xalign = 0.0
+define gui.history_text_xpos = .5
+define gui.history_text_ypos = 40
+define gui.history_text_width = 256
+define gui.history_text_xalign = .5
 
 
 ## NVL-Mode ####################################################################

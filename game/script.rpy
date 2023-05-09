@@ -1,12 +1,12 @@
 ﻿init python:
     config.nearest_neighbor = True
 
-    def regblip(event, **kwargs):
+    def beetblip(event, **kwargs):
         if event == "show":
             renpy.music.play("audio/blip1.ogg", channel="sound",loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
-    def groanblip(event, **kwargs):
+    def dukeblip(event, **kwargs):
         if event == "show":
             renpy.music.play("audio/blip2.ogg", channel="sound",loop=True)
         elif event == "slow_done" or event == "end":
@@ -47,8 +47,8 @@ image beet paper:
     repeat
 
 # Declare characters
-define d = Character("Duke", callback = groanblip)
-define b = Character("beet", callback = regblip)
+define d = Character("Duke", callback = dukeblip)
+define b = Character("beet", callback = beetblip)
 
 # The game starts here.
 
@@ -216,8 +216,6 @@ label night1beet:
         "Hi": 
             jump beetHi
 
-    #   "hi": 
-    #      jump beetlowercase
    
 
 label beetHi:
@@ -225,9 +223,9 @@ label beetHi:
     b "im usually not on this side of the conversation lol"
     b "so uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
     b "what do you do as a job"
-    #allow keyboard entry. anything over ten characters "im not reading all that"
+    # allow keyboard entry. anything over ten characters "im not reading all that"
     $ job = renpy.input("Job?")
-    $ job = job.strip()
+    $ job = job.strip() # remove spaces
     jump beetjob
 
 label beetjob:
@@ -235,7 +233,7 @@ label beetjob:
         b "im not reading all that"
         b "youve got a long ass title man"
         b "couldnt make it a little more consumable for me ?"
-        b "get it down to nine letters ? or something ?"
+        b "get it down to nine letters ? or something"
         b "whatever its fine i dont mind"
         b "you can do what youd like i dont judge"
     #if
@@ -243,27 +241,83 @@ label beetjob:
         b "thats neat"
         b "thats a really cool job"
         b "im sure its fulfilling and stuff"
-        b "are you any big projects youre working on at your job"
+        b "are there any big projects youre working on at your job"
         $ proj = renpy.input("Big projects?")
         $ proj = proj.strip()
         if len(proj) > 10:
             b "phew wow that sure is a lot"
             b "must be stressful"
+            b "youre so strong"
         #if
         else:
             b "oh that doesnt sound so bad"
             b "i think even i could do that"
         #else
     #else
-
+    b ".."
     b "okay well anyway you dont seem to be talking much"
     b "which is fine but im gonna need some effort"
     b "so"
     show beet paper
     b "im gonna write out some questions for you to ask me on this paper"
-    return
+    b "ok here."
+    show beet neutral
+    b "read these out please"
+    jump beetdanquestions
 
-    
-label beetlowercase:
-    b ""
-    return
+
+default danlike = False
+default dansong = False
+default danalbum = False
+default danband = False
+
+label beetdanquestions:
+    menu:
+        b "read these out please {fast}"
+
+        "do you like steely dan" if not danlike:
+            $ danlike = True
+            jump beetlike
+        "what is your favorite steely dan song" if not dansong:
+            $ dansong = True
+            jump beetsong
+        "what is your favorite steely dan album" if not danalbum:
+            $ danalbum = True
+            jump beetalbum
+        "what is your favorite band" if not danband:
+            $ danband = True
+            jump beetband
+        "Ask your own question.":
+            jump beetownquestions
+
+
+label beetlike:
+    b "yea"
+    jump beetdanquestions
+label beetsong:
+    b "doctor wu"
+    b "so good"
+    b "something about the sax and the vocals theres so much emotion in it"
+    b "and its got like a story"
+    b "all their songs have a story but this one is the coolest"
+    b "a therapist whos more than he lets on ? so sick so relatable"
+    jump beetdanquestions
+label beetalbum:
+    b "that is such a good question"
+    b "and so many fantastic options"
+    b "my favorite is the royal scam"
+    b "like its their most advanced album"
+    b "you have to have a lot up here to understand it and stuff" #point to head animation
+    b "but like. kid charlemagne man"
+    b "and HAITIAN DIVORCE dude haitian divorce" #pog somehow
+    b "steely damn. thats what i always say"
+    b "steely damn"
+    jump beetdanquestions
+label beetband:
+    b "the doobie brothers"
+    b "LMAO just kidding steely dan"
+    #pog
+    b "theyre so advanced did you know that they had a cycling tour group of musicians because they thought certain players sounded better on certain songs and sometimes during concerts there would be more than six guitarists because they wanted their music to be perfect{nw}"
+    b "and anyway when walter becker died it was the worst day of my life"
+    jump beetdanquestions
+label beetownquestions:
