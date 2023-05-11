@@ -307,7 +307,9 @@ label beetalbum:
     b "and so many fantastic options"
     b "my favorite is the royal scam"
     b "like its their most advanced album"
+    show beet finger
     b "you have to have a lot up here to understand it and stuff" #point to head animation
+    show beet neutral
     b "but like. kid charlemagne man"
     b "and HAITIAN DIVORCE dude haitian divorce" #pog somehow
     b "steely damn. thats what i always say"
