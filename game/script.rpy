@@ -165,7 +165,7 @@ label dukesquat:
         "Please, I'm very interested":
             jump dukesquatmore
         "No":
-            jump dukequestions
+            jump dukefinal1
 
 label dukesquatmore:
     d "I seem to be forgetting."
@@ -193,6 +193,11 @@ label dukework:
     d "I don't do much writing beyond that.{w=.5} And acrostic poems."
     jump dukequestions
 
+
+label dukefinal1:
+    d "At this point, I would have liked to offer you a minigame in exchange for an interesting fact about me."
+    d "But, alas, I had a fog in my mind and left my minigame in the car."
+    jump dukebye
 
 label dukebye:
     d "Ah, it looks like our time is up."
@@ -322,4 +327,29 @@ label beetband:
     b "theyre so advanced did you know that they had a cycling tour group of musicians because they thought certain players sounded better on certain songs and sometimes during concerts there would be more than six guitarists because they wanted their music to be perfect{nw}"
     b "and anyway when walter becker died it was the worst day of my life"
     jump beetdanquestions
+
 label beetownquestions:
+    b "you have your own questions"
+    b "what a surprise youre full of surprises right now did you know that"
+    b "go ahead"
+    b "{w=.2}.{w=.2}.{w=.2}"
+    b "just kidding you have to do this minigame first"
+    b "boom minigame"
+    b "go minigame"
+    b "shit it doesnt wanna work"
+    b "gimme a sec"
+    hide beet
+    "She's gone."
+    show beet neutral
+    b "yeah its broken"
+    b "the mini game is broken"
+    b "so none of your questions today unfortunately were gonna have to put a hold on that unfortunately"
+    jump beetbye
+
+label beetbye:
+    b "anyway it was nice meeting you"
+    b "yeah and ill probably see you tomorrow"
+    b "if youre arent busy with uhh"
+    b "[job]"
+    hide beet
+    return

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 221: expected statement.
-    job = job.strip()
-        ^
+File "game/script.rpy", line 353: expected statement.
+    b [job]
+           ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Apr 27 17:03:30 2023
+Ren'Py Version: Ren'Py 8.1.0.23051307
+Thu Jun  1 14:41:26 2023
