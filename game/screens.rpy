@@ -243,13 +243,8 @@ screen quick_menu():
 
     if quick_menu:
 
-        vbox:
-            style_prefix "quick"
-
-            xalign 1.0
-            xoffset -20
-            yalign 0
-            yoffset 416
+        frame:
+            has vbox
 
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')

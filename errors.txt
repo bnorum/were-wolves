@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 353: expected statement.
-    b [job]
-           ^
+File "game/screens.rpy", line 245: 'style' is not a keyword argument or valid child for the screen statement.
+    style quick_vbox is vbox
+         ^
 
-Ren'Py Version: Ren'Py 8.1.0.23051307
-Thu Jun  1 14:41:26 2023
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Fri Jun 16 22:34:36 2023

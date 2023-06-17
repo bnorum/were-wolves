@@ -344,12 +344,24 @@ label beetownquestions:
     b "yeah its broken"
     b "the mini game is broken"
     b "so none of your questions today unfortunately were gonna have to put a hold on that unfortunately"
+    b "we can do this instead"
+    b "try drawing a picture of me flipping you off"
+    $ my_drawing = draw_logic.Draw.main()
+    b "LMAO sweet"
+    b "ok now say something mean to me"
+    $ job = renpy.input("Something Mean?")
+    b "wtf dude"
+    hide beet
+    show expression my_drawing
+    b "eat shit pal"
+    hide expression my_drawing
     jump beetbye
 
 label beetbye:
+    show beet neutral
     b "anyway it was nice meeting you"
     b "yeah and ill probably see you tomorrow"
     b "if youre arent busy with uhh"
     b "[job]"
     hide beet
-    return
+    return  

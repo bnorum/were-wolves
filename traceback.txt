@@ -1,28 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 222, in script
-    if str(job).len() > 10:
-  File "game/script.rpy", line 222, in <module>
-    if str(job).len() > 10:
-AttributeError: 'str' object has no attribute 'len'
+After initialization, but before game start.
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "game/screens.rpy", line 265, in <module>
+    spacing gui.quick_spacing
+AttributeError: 'StoreModule' object has no attribute 'quick_spacing'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 222, in script
-    if str(job).len() > 10:
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
+    run(restart)
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\main.py", line 76, in run
+    renpy.translation.init_translation()
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\translation\__init__.py", line 583, in init_translation
+    renpy.store._init_language() # type: ignore
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\translation\__init__.py", line 667, in change_language
+    new_change_language(tl, language)
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\translation\__init__.py", line 629, in new_change_language
+    i.apply()
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2907, in apply
+    value = renpy.python.py_eval(expr)
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
     return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\brade\Desktop\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+  File "F:\downloads\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 222, in <module>
-    if str(job).len() > 10:
-AttributeError: 'str' object has no attribute 'len'
+  File "game/screens.rpy", line 265, in <module>
+    spacing gui.quick_spacing
+AttributeError: 'StoreModule' object has no attribute 'quick_spacing'
 
-Windows-10-10.0.19044 AMD64
+Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
-We're Wolves 1.0
-Thu Apr 27 17:06:18 2023
+We're Wolves 0.1
+Fri Jun 16 22:34:50 2023
