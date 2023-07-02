@@ -364,4 +364,3 @@ label beetbye:
     b "if youre arent busy with uhh"
     b "[job]"
     hide beet
-    return  

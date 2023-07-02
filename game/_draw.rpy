@@ -164,7 +164,7 @@ init -10 python in draw_logic:
         @classmethod
         def main(
             cls,
-            background=None,
+            background="artbg.png",
             reference=None,
             start_width=None,
             start_color=None,
