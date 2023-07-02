@@ -13,3 +13,6 @@ Menu Layouts (WIP) : https://www.figma.com/file/8UsZDW2nY8ntVBJ6LeJVaC/We're-Wol
 To avoid spoilers, don't read too closely into the script file.
 You're allowed to look at it! Just don't read it.
 But if you aren't gonna play the game, go for it. I just hope you play it :O
+
+CREDITS:
+Ren'pyDraw by NyashniyVladya https://github.com/NyashniyVladya/RenPyDraw/tree/main
